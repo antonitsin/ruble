@@ -1,0 +1,14 @@
+Package: Ruble
+Title: Personal Finance Help In R
+Version: 1.0
+Author: Alexey Antonitsin <aantonitsin@ebay.com>
+Maintainer: Alexey Antonitsin <aantonitsin@ebay.com>
+Description: This package aims to help make personal financial decision. Such decisions usually involve a lot of variables and best made with the help of functions.
+Depends: R (>= 3.2.3), PortfolioAnalytics
+Imports: ggplot2,  TTR,   shiny, stockPortfolio, xts
+License: GPL-3
+LazyData: true
+RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

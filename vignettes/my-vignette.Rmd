@@ -1,0 +1,38 @@
+---
+title: "Ruble package vignette"
+author: "Alexey Antonitsin"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+## stock_pick
+
+This function will take a sample (stocks_lim) of tickers and pull their returns data. Then it will
+run the optimal allocation portofolio to allocate the budget between this stocks most efficiently.
+
+The function also chekcs if the ticker is still available on Yahoo Finance and if the ticker existed on a 
+given date.
+```{r, echo=FALSE, results='asis'}
+Ruble::stock_pick()
+```
+
+Alternatively, if stock tickers are supplied, the function will try to allocate budget between funds.
+```{r, echo=FALSE, results='asis'}
+Ruble::stock_pick(c("EBAY", "AMZN"))
+```
+
+
+## rent_or_buy
+This function goal is to help make a decision to buy or to rent a house. Function has a lot of arguments with default values.
+Also Shiny dashboard is available for visualization the results.
+
+Output is a chart that demonstrates 2 curves: one for renting and another for buying.
+```{r}
+Ruble::rent_or_buy()
+```
